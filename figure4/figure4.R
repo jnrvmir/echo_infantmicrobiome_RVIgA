@@ -17,7 +17,7 @@ full.dat <- read.csv("data_figure4.csv")
 
 ### Analysis include a linear mixed effects model, adjusted for gestational age and repeated measured.
 
-### Lienar mixed effects model
+### Linear mixed effects model
 clean_model <- lmer(log.titer ~ as.factor(month) + ga_best + (1 | participant_id), 
                     data = full.dat)
 ### Estimated marginal means with adjustment for multiple comparisons
@@ -37,6 +37,7 @@ visit.cols = c("Birth"= "#999999",
                "Month 12"= "darkblue")
 
 ### Figure plot 
+
 full.dat %>%
   group_by(month) %>%
   summarize(
