@@ -226,10 +226,10 @@ library(data.table); library(tidyverse); library(microshades); library(patchwork
 ######################### Load in Data ##############################################
 
 ## ASV for infants included in this analysis ##
-in.dat <- read.csv(asv_fig2C.csv)
+in.dat <- read.csv("asv_fig2C.csv")
 
 ## Metadata needed for innfants included in this analysis ##
-in.meta <- read.csv(metadata_fig2C.csv)
+in.meta <- read.csv("metadata_fig2C.csv")
 
 #####################################################################################
 #### Removing zero reads samples #####
